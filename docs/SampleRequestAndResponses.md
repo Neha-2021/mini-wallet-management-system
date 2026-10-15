@@ -43,3 +43,24 @@ curl --request POST \
 }'
 ```
 Response: `Neha has transferred Rs.20 to Vishnu`
+
+### Get transactions
+```
+curl --request GET \
+  --url 'http://localhost:8080/transaction/v1/getTransactions?username=Neha&filter=SEND&sorter=AMOUNT'
+```
+Response: 
+```json
+[
+	{
+		"amount": 200,
+		"transactionType": "WALLET_TO_WALLET_TRANSFER",
+		"timestamp": "2026-10-16T00:42:15.235707"
+	},
+	{
+		"amount": 200,
+		"transactionType": "WALLET_TO_WALLET_TRANSFER",
+		"timestamp": "2026-10-16T00:42:17.315184"
+	}
+]
+```
