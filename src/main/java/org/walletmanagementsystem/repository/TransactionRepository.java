@@ -14,8 +14,4 @@ public interface TransactionRepository {
     List<Transaction> findBySenderId(UUID senderId);
 
     List<Transaction> findByReceiverId(UUID receiverId);
-
-    List<Transaction> findByDate(Date date);
-
-    List<Transaction> findByAmount(BigDecimal amount);
 }

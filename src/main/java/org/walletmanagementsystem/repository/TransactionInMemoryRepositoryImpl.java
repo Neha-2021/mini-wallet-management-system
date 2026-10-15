@@ -46,14 +46,4 @@ public class TransactionInMemoryRepositoryImpl implements TransactionRepository 
         }
         return transactions;
     }
-
-    @Override
-    public List<Transaction> findByDate(Date date) {
-        return List.of();
-    }
-
-    @Override
-    public List<Transaction> findByAmount(BigDecimal amount) {
-        return List.of();
-    }
 }
